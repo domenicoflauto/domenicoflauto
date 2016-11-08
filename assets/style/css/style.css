@@ -466,7 +466,6 @@ template {
   background-color: #131313; }
 
 .testo {
-  background-color: rgba(55, 55, 55, 0.5);
   width: 70%;
   height: auto;
   z-index: 1;
@@ -480,10 +479,16 @@ template {
   color: #7FA5A6;
   margin: 0; }
 
-.hello p {
+.hello p, span {
   font-size: 1.05rem;
   font-weight: 300;
   color: #B0B0B0; }
+
+.hello i {
+  font-size: 1.05rem;
+  color: #B0B0B0;
+  line-height: 10px;
+  vertical-align: -0.125rem; }
 
 /*
     pesticide v0.1.0 . @mrmrs . MIT
