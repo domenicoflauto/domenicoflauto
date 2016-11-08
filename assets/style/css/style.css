@@ -438,6 +438,37 @@ template {
 [hidden] {
   display: none; }
 
+.acc input {
+  display: none;
+  visibility: hidden; }
+
+.acc label {
+  display: block;
+  padding: 0.5em;
+  border-bottom: 1px solid #CCC;
+  color: #B0B0B0; }
+
+.acc label:hover {
+  color: #fff; }
+
+.acc label::after {
+  content: " more"; }
+
+.acc section {
+  font-weight: 300; }
+
+#expand {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  color: #B0B0B0; }
+
+#toggle:checked ~ #expand {
+  height: 500px; }
+
+#toggle:checked ~ label::after {
+  content: " less"; }
+
 .header {
   position: fixed;
   top: 0;
