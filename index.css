@@ -1,0 +1,65 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  font-size: 1em;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+strong {
+  /* cursor: pointer; */
+}
+
+strong:hover {
+  /* text-decoration: underline; */
+}
+
+main {
+  margin: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  max-width: 600px;
+}
+
+p {
+    width: 100%;
+    margin-block: 24px;
+}

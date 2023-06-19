@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domenico Flauto</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <p>
+        Hi! I am Dom, a product designer based in London, UK.
+      </p>
+      <p>
+        I specialise in UX/UI, design systems, user resarch and prototyping.
+        <br>
+        In the last 8+ years I have helped start-ups growing and becoming more user-centered.
+      </p>
+      <p>
+        While I hack some code to make this website better, feel free to drop me an email at
+        <strong>hello@domenicoflauto.com</strong>
+        <!-- <strong id="email" onclick="copyEmail()">hello@domenicoflauto.com</strong> -->
+           
+      </p>        
+        <script>
+          function copyEmail() {
+            var emailElement = document.getElementById("email");
+            var emailText = emailElement.innerText;
+
+            // Create a temporary input element
+            var tempInput = document.createElement("input");
+            tempInput.setAttribute("value", emailText);
+            document.body.appendChild(tempInput);
+
+            // Select and copy the text
+            tempInput.select();
+            document.execCommand("copy");
+
+            // Remove the temporary input
+            document.body.removeChild(tempInput);
+
+            // Provide some feedback to the user
+            alert("Email copied to clipboard: " + emailText);
+          }
+        </script>
+    </div>
+  </main>
+</body>
+</html>
