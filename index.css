@@ -33,6 +33,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-family: 'iA Writer Quattro', SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 }
 
 a {
@@ -66,6 +67,15 @@ main {
 p {
     width: 100%;
     margin-block: 24px;
+}
+
+h1.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-weight: 300;
+  margin-block: 0;
+  color: #24292F;
+  line-height: 150%;
 }
 
 .social {
