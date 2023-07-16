@@ -122,3 +122,16 @@ h1.title {
 .social a:hover svg#github path {
   fill: #24292F;
 }
+
+.social a:hover svg#threads path {
+  fill: #111111;
+}
+
+svg#threads {
+  width: 16px;
+  height: 16px;
+}
+
+svg#threads path {
+  fill: #ccc;
+}
