@@ -135,3 +135,52 @@ svg#threads {
 svg#threads path {
   fill: #ccc;
 }
+
+.wrap-dot {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 6px;
+  overflow: visible;
+}
+
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: #16D66E;
+  border-radius: 50%;
+  position: relative;
+}
+
+.dot:before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border: 5px solid #16D66E;
+  border-radius: inherit;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+  animation: 2s expand cubic-bezier(0.29, 0, 0, 1) infinite;
+  animation-delay: 1s;
+}
+
+@keyframes expand {
+  1% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+    border-color: #fff;
+    background-color: none;
+    border-width: 2px;
+  }
+}
