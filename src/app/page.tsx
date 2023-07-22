@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 export default function Home() {
   return (
     <main>
@@ -62,6 +64,7 @@ export default function Home() {
         </a>
         </div>
     </div>
+    <Analytics />
   </main>
   )
 }
