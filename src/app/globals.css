@@ -151,6 +151,10 @@ h1.title {
   fill: #24292F;
 }
 
+.social a svg#threads path {
+  fill: #b1b1b1;
+}
+
 .social a:hover svg#threads path {
   fill: #111111;
 }
