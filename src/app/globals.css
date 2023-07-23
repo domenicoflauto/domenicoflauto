@@ -110,14 +110,13 @@ h1.title {
 .social {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 24px;
   gap: 16px;
 }
 
 .social a svg path {
-  /* fill: #ccc; */
   -webkit-transition: fill .25s ease-in-out;
   transition: fill .25s ease-in-out;
 }
