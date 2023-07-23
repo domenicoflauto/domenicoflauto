@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/.yarn
 
 # testing
 /coverage
@@ -35,6 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # Storybook
-/.storybook/*.js
-/.storybook/*.ts
 build-storybook.log
+/storybook-static
