@@ -1,4 +1,4 @@
-@import "/assets/fonts/IMBPlexSans/woff/IBMPlexSans-Light.css";
+/* @import "/assets/fonts/IMBPlexSans/woff/IBMPlexSans-Light.css";
 @import "/assets/fonts/IMBPlexSans/woff/IBMPlexSans-Medium.css";
 @import "/assets/fonts/IMBPlexSans/woff/IBMPlexSans-Text.css";
 @import "/assets/fonts/IMBPlexSans/woff/IBMPlexSans-SemiBold.css";
@@ -8,7 +8,7 @@
 @import "/assets/fonts/IMBPlexSans/woff2/IBMPlexSans-Medium.css";
 @import "/assets/fonts/IMBPlexSans/woff2/IBMPlexSans-Text.css";
 @import "/assets/fonts/IMBPlexSans/woff2/IBMPlexSans-SemiBold.css";
-@import "/assets/fonts/IMBPlexSans/woff2/IBMPlexSans-Bold.css";
+@import "/assets/fonts/IMBPlexSans/woff2/IBMPlexSans-Bold.css"; */
 
 :root {
   --blue-900: #040D25;
@@ -26,7 +26,12 @@
   --grey-300: #C8CAD0;
   --grey-400: #B2B5BD;
   --grey-500: #9CA0AA;
-  --grey-600: #868A98;
+  --grey-600: #717684;
+  --grey-700: #5E626E;
+  --grey-800: #4B4E58;
+  --grey-900: #383B42;
+
+  --white: #FFFFFF;
 }
 
 *,
@@ -45,8 +50,22 @@ figure,
 blockquote,
 dl,
 dd {
-  font-size: 1em;
   margin: 0;
+}
+
+
+/* Dark mode */ 
+/* :root {
+  --bg-color: var(--blue-900);
+  --text-color-1: var(--grey-100);
+  --text-color-2: var(--grey-300);
+} */
+
+:root {
+  --bg-color: var(--white);
+  --text-color-1: var(--grey-900);
+  --text-color-2: var(--grey-800);
+  --text-color-3: var(--grey-700);
 }
 
 html {
@@ -57,7 +76,7 @@ html {
 }
 
 body {
-  background-color: var(--blue-900);
+  background-color: var(--bg-color);
   min-height: 100vmin;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 16px;
@@ -69,7 +88,12 @@ a {
   text-decoration: underline;
 }
 
-main.container {
+strong {
+  font-weight: 600;
+  color: var(--text-color-2)
+}
+
+section.container {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -77,29 +101,29 @@ main.container {
   align-items: center;
   min-height: 100dvh;
   width: calc(100% - 128px);
-  /* background: #ffffff10; */
+  /* background: #040D2510; */
 }
 
 @media screen and (min-width: 1328px) {
-  main.container {
+  section.container {
     width: 1200px
   }
 }
 
 @media screen and (max-width: 800px) {
-  main.container {
+  section.container {
     width: calc(800px - 128px);
   }
 }
 
 @media screen and (max-width: 738px) {
-  main.container {
+  section.container {
     width: calc(100% - 64px);
   }
 }
 
 @media screen and (max-width: 480px) {
-  main.container {
+  section.container {
     width: calc(100% - 32px);
   }
   .intro {
@@ -110,16 +134,10 @@ main.container {
   }
 }
 
-.intro {
-  width: 100%;
-  max-width: 496px;
-  position: relative;
-}
-
 p {
     width: 100%;
     margin-block: 24px;
-    color: var(--grey-300);
+    color: var(--text-color-3);
     font-size: 16px;
     line-height: 150%;
     font-style: normal;
@@ -130,136 +148,15 @@ h1.title {
   font-size: 32px;
   font-weight: 400;
   margin-block: 0;
-  color: var(--grey-100);
+  color: var(--text-color-1);
   line-height: 150%;
 }
 
-.social {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 24px;
-  gap: 16px;
-}
-
-.social a svg path {
-  -webkit-transition: fill .25s ease-in-out;
-  transition: fill .25s ease-in-out;
-}
-
-.social a {
-  position: relative;
-}
-
-.social a:hover::before {
-  content: "";
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  z-index: -1;
-  background-color: var(--grey-200);
-  border-radius: 4px;
-  top: -6px;
-  left: -6px;
-  -webkit-transition: background-color .15s ease-in-out;
-  transition: background-color .15s ease-in-out;
-}
-
-.social a:hover svg#twitter path {
-  fill: #1D9BF0;
-}
-
-.social a:hover svg#linkedin path {
-  fill: #006699;
-}
-
-.social a:hover svg#github path {
-  fill: #24292F;
-}
-
-.social a:hover svg#threads path {
-  fill: #111111;
-}
-
-.wrap-dot {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  gap: 6px;
-  overflow: visible;
-}
-
-.wrapped-text {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 4px;
-  overflow: visible;
-  font-weight: 500;
-}
-
-.dot {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 10px;
-  height: 10px;
-  background-color: #16D66E;
-  border-radius: 50%;
-  position: relative;
-}
-
-.dot:before {
-  content: "";
-  width: inherit;
-  height: inherit;
-  border: 5px solid #16D66E;
-  border-radius: inherit;
-  position: absolute;
-  z-index: -10;
-  opacity: 0;
-  animation: 2s expand cubic-bezier(0.29, 0, 0, 1) infinite;
-  animation-delay: 1s;
-}
-
-.blob {
-  filter: blur(40px);
-  opacity: 0.6;
-  position: absolute;
-  top: calc(50% - 209px);
-  right: calc(467px/2);
-  pointer-events: none;
-}
-
-.profile-picture {
-  pointer-events: none;
-  border-radius: 8px;
-  flex-shrink: 0;
-  mix-blend-mode: screen;
-}
-
-@keyframes expand {
-  1% {
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  66% {
-    width: 300%;
-    height: 300%;
-    opacity: 0;
-    border-color: #16D66E;
-    background-color: none;
-    border-width: 2px;
-  }
-  100% {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    background-color: none;
-    border-color: transparent;
-  }
+h2.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-block: 0;
+  color: var(--text-color-1);
+  line-height: 150%;
 }

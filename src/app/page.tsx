@@ -1,94 +1,38 @@
 "use client";
 
-import { Analytics } from '@vercel/analytics/react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
-import { SocialIcons } from '@/components/socialIcons';
+import { Intro } from '@/components/intro';
+import { Work } from '@/components/work';
 
 export default function Home() {
   return (
-    <Container>
-      <Intro>
-        <h1 className="title">
-          <WrappedText>
-            Hi, I am&nbsp;<Image className='profile-picture' src="/images/dom-bw.png" alt="Dom's Profile picture" width={32} height={32} />
-          </WrappedText>
-          &nbsp;<i>Dom</i></h1>
-        <p>
-          <WrappedText>
-            I am a product designer made in&nbsp;
-            <Image src="/images/flag-it.svg" alt="Flag of Italy" width={18} height={14} />Italy,&nbsp;
-          </WrappedText>
-          <WrappedText>
-            based&nbsp;in
-            <Image src="/images/flag-gb.svg" alt="Flag of the United Kingdom" width={18} height={14} />London,&nbsp;UK.
-          </WrappedText>
-        </p>
-        <p>
-          In the last 8+ years, I have helped start-ups growing and becoming more user-centred, while putting my heart in UX/UI, design systems, user research and prototyping.
-        </p>
-        <p>
-          Do you have an exciting project, work collaboration or idea you want to chat about?&nbsp;
-          <WrappedText>I am currently
-            <Dot />
-            <strong>
-              open to new opportunities!
-            </strong>
-          </WrappedText>
-          <br />
-          Drop me an email at <strong>hello@domenicoflauto.com</strong>
-        </p>
-        <SocialIcons />
-      </Intro>
-      <Blob />
+    <>
+      <Container>
+        <Intro />
+      </Container>
+      <Container>
+        <Work />
+      </Container>
       <Analytics />
-    </Container>
+    </>
   )
 }
 
 function Container({ children, debug = false }: { children: React.ReactNode, debug?: boolean }) {
   return (
-    <main className="container" style={debug ? { background: "#ffffff15" } : {}}>
-      <AnimatePresence>
+    <section className="container" style={debug ? { background: "#ffffff15" } : {}}>
+      {/* <AnimatePresence>
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 15 }}
           transition={{ duration: 0.3 }}
-        >
-          {children}
-        </motion.div>
-      </AnimatePresence>
-    </main>
-  )
-}
-
-function Intro({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="intro">
+        > */}
       {children}
-    </div>
-  )
-}
-
-
-function Dot() {
-  return (
-    <span className="dot" />
-  );
-}
-
-function Blob() {
-  return (
-    <Image className="blob" src="/images/blob.svg" height={418} width={467} alt="" />
-  )
-}
-
-function WrappedText({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="wrapped-text">
-      {children}
-    </span>
+      {/* </motion.div>
+      </AnimatePresence> */}
+    </section>
   )
 }
