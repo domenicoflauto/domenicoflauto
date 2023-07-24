@@ -75,9 +75,9 @@ main.container {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  min-height: 100dvh;
   width: calc(100% - 128px);
-  /* background: #ffffff10; */
+  background: #ffffff10;
 }
 
 @media screen and (min-width: 1328px) {

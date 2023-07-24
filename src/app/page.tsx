@@ -1,6 +1,9 @@
-import { Analytics } from '@vercel/analytics/react';
+"use client";
 
+import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { SocialIcons } from '@/components/socialIcons';
 
 export default function Home() {
@@ -47,7 +50,16 @@ export default function Home() {
 function Container({ children, debug = false }: { children: React.ReactNode, debug?: boolean }) {
   return (
     <main className="container" style={debug ? { background: "#ffffff15" } : {}}>
-      {children}
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 15 }}
+          transition={{ duration: 0.3 }}
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence>
     </main>
   )
 }
