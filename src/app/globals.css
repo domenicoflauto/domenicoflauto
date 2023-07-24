@@ -65,7 +65,8 @@ dd {
   --bg-color: var(--white);
   --text-color-1: var(--grey-900);
   --text-color-2: var(--grey-800);
-  --text-color-3: var(--grey-700);
+  --text-color-3: var(--grey-600);
+  --text-color-4: var(--grey-500);
 }
 
 html {
@@ -84,13 +85,17 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--text-color-2);
   text-decoration: underline;
+}
+
+a:hover {
+  color: var(--text-color-1);
 }
 
 strong {
   font-weight: 600;
-  color: var(--text-color-2)
+  color: var(--text-color-3)
 }
 
 section.container {
