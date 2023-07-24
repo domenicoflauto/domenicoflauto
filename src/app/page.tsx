@@ -16,8 +16,8 @@ export default function Home() {
           </WrappedText>
           &nbsp;<i>Dom</i></h1>
         <p>
-          I am a product designer made in&nbsp;
           <WrappedText>
+            I am a product designer made in&nbsp;
             <Image src="/images/flag-it.svg" alt="Flag of Italy" width={18} height={14} />Italy,&nbsp;
           </WrappedText>
           <WrappedText>
