@@ -1,4 +1,4 @@
-.work {
+.work-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -8,10 +8,20 @@
     padding-bottom: 240px;
 }
 
+.work-wrapper section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
 .projects, .articles, .patents {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    width: 100%;
 }
 
 .work-item {
@@ -21,11 +31,14 @@
     align-items: center;
     gap: 32px;
     width: 100%;
-    /* border: 1px solid red; */
+}
+
+.work-item img {
+    max-width: 584px;
+    min-width: 260px;
 }
 
 .work p, h2 {
-    /* border: 1px solid red; */
     margin: 0;
 }
 
@@ -40,23 +53,72 @@
 }
 
 .item-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 4px;
     width: 100%;
+    font-size: 16px;
+    line-height: 150%;
+    position: relative;
+    color: var(--color-text-2);
+}
+
+.item-link svg {
+    height: 20px;
+    position: relative;
+    top: 4px;
+    margin-inline-end: 4px;
 }
 
 span.item-link {
-    color: var(--text-color-3);
-    
+    color: var(--text-color-2);   
 }
 
-a.item-link svg path {
+.item-link svg path {
     fill: var(--text-color-4);
 }
 
 a.item-link:hover svg path {
     fill: var(--text-color-1);
+}
+
+/* 800px - 1327px */
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+    .work-item h2 {
+        font-size: 2.5vw
+    }
+    .work-item p, .work-item span {
+        font-size: 14px;
+    }
+    .item-link svg {
+        height: 14px;
+    }
+}
+
+/* <1327px */
+@media screen and (max-width: 1327px) {
+    .projects, .articles, .patents {
+        gap: 80px;
+    }
+}
+
+/* <800px */
+@media screen and (max-width: 800px) {
+    .work-item img {
+        max-width: 100%;
+    }
+    
+    .work-item {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 32px;
+    }
+}
+
+/* <480px */
+@media screen and (max-width: 480px) {
+    .work-item {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+    }
 }

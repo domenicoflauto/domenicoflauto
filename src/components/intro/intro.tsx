@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { SocialIcons } from '@/components/socialIcons';
 
+import { motion } from 'framer-motion';
+
 import './intro.css';
 
 export function Intro() {
@@ -36,7 +38,19 @@ export function Intro() {
                 Drop me an email at <strong>hello@domenicoflauto.com</strong>
             </p>
             <SocialIcons />
-            <Blob1 />
+            <motion.div
+                className='blob'
+                style={{ originX: 0.5, originY: 0.5 }}
+                initial={{ scale: 1 }}
+                animate={{ scale: 8 }}
+                transition={{
+                    ease: "easeOut",
+                    delay: 1,
+                    duration: 4,
+                }}
+            >
+                <Blob1 />
+            </motion.div>
         </div>
     )
 }
@@ -55,7 +69,7 @@ function Dot() {
 
 function Blob1() {
     return (
-        <svg className="blob" xmlns="http://www.w3.org/2000/svg" width="163" height="203" viewBox="0 0 163 203" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="163" height="203" viewBox="0 0 163 203" fill="none">
             <g clipPath="url(#clip0_442_41474)">
                 <g opacity="0.4">
                     <g filter="url(#filter0_f_442_41474)">
@@ -93,7 +107,7 @@ function Blob1() {
     )
 }
 
-function WrappedText({ children }: { children: React.ReactNode }) {
+export function WrappedText({ children }: { children: React.ReactNode }) {
     return (
         <span className="wrapped-text">
             {children}

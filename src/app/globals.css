@@ -106,6 +106,7 @@ section.container {
   align-items: center;
   min-height: 100dvh;
   width: calc(100% - 128px);
+  transform-origin: 50% 50%;
   /* background: #040D2510; */
 }
 
@@ -141,8 +142,7 @@ section.container {
 
 p {
     width: 100%;
-    margin-block: 24px;
-    color: var(--text-color-3);
+    color: var(--text-color-2);
     font-size: 16px;
     line-height: 150%;
     font-style: normal;

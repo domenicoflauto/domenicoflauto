@@ -2,10 +2,18 @@
 
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 import { DuffelLogo, EigenLogo } from '.';
+import staysPreview from "public/images/work/stays-1.png"
+import mssPreview from "public/images/work/multi-step-search-1.png"
+import modelEvalPreview from "public/images/work/model-evaluation-1.png"
+import correlatedAnswerPreview from "public/images/work/correlated-answers-1.png"
+import blogPostPreview from "public/images/articles/modern-flight-booking.png"
+import patentPreview from "public/images/patents/training.png"
 
 import './work.css';
+
 
 
 const IconArrow = () => {
@@ -105,7 +113,7 @@ const WORK = [
       final delivery.
     `,
     callToAction: <ItemLink teaser={1} />,
-    image: "/images/work/stays-1.png",
+    image: staysPreview,
     logo: "duffel"
   },
   {
@@ -117,7 +125,7 @@ const WORK = [
       more easily the flight and fare they are looking for.
       `,
     callToAction: <ItemLink teaser={2} />,
-    image: "/images/work/multi-step-search-1.png",
+    image: mssPreview,
     logo: "duffel"
   },
   {
@@ -129,7 +137,7 @@ const WORK = [
       and effort needed to build high-quality ML models for their use cases.
       `,
     callToAction: <ItemLink teaser={3} />,
-    image: "/images/work/model-evaluation-1.png",
+    image: modelEvalPreview,
     logo: "eigen"
   },
   {
@@ -140,7 +148,7 @@ const WORK = [
     also enables delivery teams to add and override correlation tags in the manual review process.
     `,
     callToAction: <ItemLink teaser={4} />,
-    image: "/images/work/correlated-answers-1.png",
+    image: correlatedAnswerPreview,
     logo: "eigen"
   }
 ]
@@ -155,7 +163,7 @@ const ARTICLES = [
       In this blog post I reflect on the challenges and gotchas that come 
       when designing a modern and intuitive booking flow.
     `,
-    image: "/images/articles/modern-flight-booking.png",
+    image: blogPostPreview,
     logo: "duffel",
     callToAction: "https://duffel.com/blog/designing-the-modern-flight-booking-experience"
   }
@@ -172,7 +180,7 @@ const PATENTS = [
       Patent US20220327284A1
       <br />
       United States
-    `, image: "/images/patents/training.png",
+    `, image: patentPreview,
     logo: "eigen"
   }
 ]
@@ -180,61 +188,68 @@ const PATENTS = [
 export function Work() {
 
   return (
-    <div className="work">
-      <div className="projects">
+    <div className="work-wrapper">
+      <section>
         <h1 className="title">Selected <i>work</i></h1>
+        <div className="projects">
 
-        {
-          WORK.map((work, index) => {
-            return (
-              <WorkItem
-                key={index}
-                title={work.title}
-                description={work.description}
-                image={work.image}
-                logo={work.logo}
-                callToAction={work.callToAction}
-              />
+          {
+            WORK.map((work, index) => {
+              return (
+                <WorkItem
+                  key={index}
+                  title={work.title}
+                  description={work.description}
+                  image={work.image}
+                  logo={work.logo}
+                  callToAction={work.callToAction}
+                />
+              )
+            }
             )
           }
-          )
-        }
-      </div>
-      <div className="articles">
+        </div>
+      </section>
+      <section>
+
         <h1 className="title">Articles</h1>
-        {
-          ARTICLES.map((article, index) => {
-            return (
-              <WorkItem
-                key={index}
-                title={article.title}
-                description={article.description}
-                image={article.image}
-                logo={article.logo}
-                callToAction={<ItemLink url={article.callToAction} />}
-              />
+        <div className="articles">
+          {
+            ARTICLES.map((article, index) => {
+              return (
+                <WorkItem
+                  key={index}
+                  title={article.title}
+                  description={article.description}
+                  image={article.image}
+                  logo={article.logo}
+                  callToAction={<ItemLink url={article.callToAction} />}
+                />
+              )
+            }
             )
           }
-          )
-        }
-      </div>
-      <div className="patents">
+        </div>
+      </section>
+      <section>
         <h1 className="title">Patents</h1>
-        {
-          PATENTS.map((patent, index) => {
-            return (
-              <WorkItem
-                key={index}
-                title={patent.title}
-                description={patent.description}
-                image={patent.image}
-                logo={patent.logo}
-              />
+        <div className="patents">
+          {
+            PATENTS.map((patent, index) => {
+              return (
+                <WorkItem
+                  key={index}
+                  title={patent.title}
+                  description={patent.description}
+                  image={patent.image}
+                  logo={patent.logo}
+                />
+              )
+            }
             )
           }
-          )
-        }
-      </div>
+        </div>
+      </section>
     </div>
   )
 }
@@ -244,7 +259,7 @@ function WorkItem({ title, description, image, logo, callToAction }:
   {
     title: string,
     description: string,
-    image: string,
+    image: StaticImport,
     logo: string,
     callToAction?: string | JSX.Element
   }) {
@@ -276,7 +291,13 @@ function WorkItem({ title, description, image, logo, callToAction }:
       viewport={{ once: true, amount: 0.5 }}
       variants={workItemVariant}
     >
-      <Image src={image} alt="Stays" width={584} height={403} />
+      <Image
+        className='work-image'
+        src={image}
+        alt=""
+
+        style={{ width: '100%', height: 'auto' }}
+      />
       <div className='work-description'>
         {renderLogo()}
         <h2 className='title' dangerouslySetInnerHTML={{ __html: title }} />
