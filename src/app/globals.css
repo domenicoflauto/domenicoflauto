@@ -71,6 +71,7 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a {
@@ -93,10 +94,9 @@ section.container {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100dvh;
+  min-height: 80dvh;
   width: calc(100% - 128px);
   transform-origin: 50% 50%;
-  overflow: hidden;
   /* background: #040D2510; */
 }
 

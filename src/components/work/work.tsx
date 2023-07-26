@@ -114,7 +114,8 @@ const WORK = [
     `,
     callToAction: <ItemLink teaser={1} />,
     image: staysPreview,
-    logo: "duffel"
+    logo: "duffel",
+    id: "stays",
   },
   {
     title: "A streamlined flight booking experience.",
@@ -126,7 +127,8 @@ const WORK = [
       `,
     callToAction: <ItemLink teaser={2} />,
     image: mssPreview,
-    logo: "duffel"
+    logo: "duffel",
+    id: "mss",
   },
   {
     title: "Help users <i>evaluating</i> and <i>understanding</i> Machine Learning models",
@@ -138,7 +140,8 @@ const WORK = [
       `,
     callToAction: <ItemLink teaser={3} />,
     image: modelEvalPreview,
-    logo: "eigen"
+    logo: "eigen",
+    id: "model-evaluation",
   },
   {
     title: "Enabling analysts to find correlations between answers in elaborated documents.",
@@ -149,7 +152,8 @@ const WORK = [
     `,
     callToAction: <ItemLink teaser={4} />,
     image: correlatedAnswerPreview,
-    logo: "eigen"
+    logo: "eigen",
+    id: "correlated-answers",
   }
 ]
 
@@ -165,7 +169,8 @@ const ARTICLES = [
     `,
     image: blogPostPreview,
     logo: "duffel",
-    callToAction: "https://duffel.com/blog/designing-the-modern-flight-booking-experience"
+    id: "blog-post",
+    callToAction: "https://duffel.com/blog/designing-the-modern-flight-booking-experience",
   }
 ]
 
@@ -181,14 +186,21 @@ const PATENTS = [
       <br />
       United States
     `, image: patentPreview,
-    logo: "eigen"
+    logo: "eigen",
+    id: "patent",
   }
 ]
 
 export function Work() {
 
   return (
-    <div className="work-wrapper">
+    <motion.div
+      className='work-wrapper'
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 25 }}
+      transition={{ duration: 0.3, delay: 0.3 }}
+    >
       <section>
         <h1 className="title">Selected <i>work</i></h1>
         <div className="projects">
@@ -198,6 +210,7 @@ export function Work() {
               return (
                 <WorkItem
                   key={index}
+                  id={work.id}
                   title={work.title}
                   description={work.description}
                   image={work.image}
@@ -219,6 +232,7 @@ export function Work() {
               return (
                 <WorkItem
                   key={index}
+                  id={article.id}
                   title={article.title}
                   description={article.description}
                   image={article.image}
@@ -239,6 +253,7 @@ export function Work() {
               return (
                 <WorkItem
                   key={index}
+                  id={patent.id}
                   title={patent.title}
                   description={patent.description}
                   image={patent.image}
@@ -250,13 +265,14 @@ export function Work() {
           }
         </div>
       </section>
-    </div>
+    </motion.div>
   )
 }
 
 
-function WorkItem({ title, description, image, logo, callToAction }:
+function WorkItem({ title, description, image, logo, callToAction, id }:
   {
+    id?: string,
     title: string,
     description: string,
     image: StaticImport,
@@ -286,9 +302,9 @@ function WorkItem({ title, description, image, logo, callToAction }:
   return (
     <motion.div
       className="work-item"
-      initial="offscreen"
+      initial={`${id === "stays" ? "onscreen" : "offscreen"}`}
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={workItemVariant}
     >
       <Image

@@ -37,13 +37,12 @@ export function Intro() {
         Do you have an exciting project, work collaboration or idea you want to chat about?&nbsp;
         I am currently
         <span className="dot" />
-        <strong>
-          open to new opportunities!
-        </strong>
+        <strong>open</strong> to new opportunities!
         <br />
         Drop me an email at <strong>hello@domenicoflauto.com</strong>
       </p>
       <SocialIcons />
+
     </div>
   )
 }

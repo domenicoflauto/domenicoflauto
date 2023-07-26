@@ -3,7 +3,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { motion } from 'framer-motion';
 
-
 import { Intro } from '@/components/intro';
 import { Work } from '@/components/work';
 import { Blob } from '@/components/intro/blob';
@@ -18,7 +17,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 25 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.3 }}
       >
         <Intro />
         <Blob />
