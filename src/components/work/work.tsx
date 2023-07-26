@@ -105,7 +105,7 @@ const ItemLink = ({ url, teaser }: { url?: string, teaser?: number }) => {
 
 const WORK = [
   {
-    title: "A new vertical to sell <i>accommodation</i>.",
+    title: "Stays: a new vertical to sell <i>accommodation</i>.",
     description: `
       I have designed and shipped the first version of Stays, a new vertical
       to sell accommodation on Duffel. This project has been a great opportunity
