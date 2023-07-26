@@ -85,9 +85,9 @@ const IconBrain = () => {
 
 const ItemLink = ({ url, teaser }: { url?: string, teaser?: number }) => {
   const Teasers = [
-    <span key="teaser1" className='item-link'><IconBook />Wanna know more? Ask me for a walkthrough of the project!</span>,
-    <span key="teaser2" className='item-link'><IconEnvelope />Intrigued? You&apos;re just a message away from the full story!</span>,
-    <span key="teaser3" className='item-link'><IconBook2 />Hungry for more details? I&apos;ve got a full menu!</span>,
+    <span key="teaser1" className='item-link'><IconBook />Curious about the project details? Feel free to request a project walkthrough!</span>,
+    <span key="teaser2" className='item-link'><IconEnvelope />Intrigued? You&apos;re just one message away from the complete story!</span>,
+    <span key="teaser3" className='item-link'><IconBook2 />Hungry for more details? I&apos;ve got a full menu ready!</span>,
     <span key="teaser4" className='item-link'><IconBrain />Know what I am talking about? Let&apos;s talk about it over coffee!</span>,
   ]
 
@@ -105,12 +105,12 @@ const ItemLink = ({ url, teaser }: { url?: string, teaser?: number }) => {
 
 const WORK = [
   {
-    title: "Stays: a new vertical to sell <i>accommodation</i>.",
+    title: "Stays: Exploring Uncharted Territory in the <i>Accommodation</i> Industry.",
     description: `
-      I have designed and shipped the first version of Stays, a new vertical
-      to sell accommodation on Duffel. This project has been a great opportunity
-      to work on a new product from scratch, from the initial research to the
-      final delivery.
+      I designed and launched the first version of Stays, a fresh vertical 
+      for selling accommodations on Duffel. This project provided me with 
+      a great opportunity to build a new product from scratch - from initial 
+      research to final delivery.
     `,
     callToAction: <ItemLink teaser={1} />,
     image: staysPreview,
@@ -118,12 +118,12 @@ const WORK = [
     id: "stays",
   },
   {
-    title: "A streamlined flight booking experience.",
+    title: "Streamlining <i>Flight Booking</i> Experience.",
     description: `
-      Reducing clicks and steps doesn't always lead to a better experience. 
-      In this project, I have iterated on Duffel's prime booking flow
-      by introducing a brand new multi-step search, so that users can find 
-      more easily the flight and fare they are looking for.
+      Reducing clicks and steps doesn't always mean providing a better user experience. 
+      In this project, I enhanced Duffel's prime booking flow by introducing 
+      a new multi-step search, facilitating users to more easily find 
+      the flight and fare they are seeking.
       `,
     callToAction: <ItemLink teaser={2} />,
     image: mssPreview,
@@ -131,12 +131,12 @@ const WORK = [
     id: "mss",
   },
   {
-    title: "Help users <i>evaluating</i> and <i>understanding</i> Machine Learning models",
+    title: "Assisting Users in <i>Evaluating</i> and <i>Understanding</i> Machine Learning Models.",
     description: `
-      Explaining Maching Learning perfomanace is a hard task. With this 
-      project, I have helped users understaing model evaluation 
-      techniques, so that they can gain trust in the results, reducing time 
-      and effort needed to build high-quality ML models for their use cases.
+      Explaining machine learning performance can be challenging. With 
+      this project, I supported users in understanding model evaluation 
+      techniques, thereby fostering trust in the results and reducing 
+      the time and effort required to build high-quality ML models for their use cases.
       `,
     callToAction: <ItemLink teaser={3} />,
     image: modelEvalPreview,
@@ -144,11 +144,12 @@ const WORK = [
     id: "model-evaluation",
   },
   {
-    title: "Enabling analysts to find correlations between answers in elaborated documents.",
+    title: "Enabling Analysts to Discover <i>Correlations</i> in Complex Documents.",
     description: `
-    Internal feature supporting our R&D team collecting richer annotation in labelling,
-    so that they can test custom models and improve the quality of the results. This feature
-    also enables delivery teams to add and override correlation tags in the manual review process.
+    This internal feature aids our R&D team in gathering more in-depth annotations 
+    for labeling, enabling them to test custom models and enhance the quality 
+    of the results. The feature also allows delivery teams to add and modify 
+    correlation tags in the manual review process.
     `,
     callToAction: <ItemLink teaser={4} />,
     image: correlatedAnswerPreview,
@@ -159,13 +160,13 @@ const WORK = [
 
 const ARTICLES = [
   {
-    title: "Designing the modern <i>flight booking</i> experience",
+    title: "Designing the Modern <i>Flight Booking</i> Experience",
     description: `
       "When presenting flight options (offers) back to your customers for a 
       simple return flight, there are at least 32 important pieces of 
       information to communicate.”<br />
-      In this blog post I reflect on the challenges and gotchas that come 
-      when designing a modern and intuitive booking flow.
+      In this blog post, I reflect upon the challenges and pitfalls that 
+      surface when designing a modern and intuitive booking flow.
     `,
     image: blogPostPreview,
     logo: "duffel",
@@ -176,9 +177,9 @@ const ARTICLES = [
 
 const PATENTS = [
   {
-    title: "Training and applying structured data extraction models",
+    title: "Training and Applying Structured Data Extraction Models",
     description: `
-      I was part of the founding team who designed and developed the 
+      I was part of the founding team that designed and developed the 
       core technology of the Eigen platform.
       <br />
       <br />

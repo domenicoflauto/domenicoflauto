@@ -31,15 +31,14 @@ export function Intro() {
         </span>
       </p>
       <p>
-        In the last 8+ years, I have helped start-ups growing and becoming more user-centred, while putting my heart in UX/UI, design systems, user research and prototyping.
+        Over the past 8+ years, I have supercharged the growth of various start-ups by fostering a more user-centered approach, focusing my expertise on UX/UI, design systems, user research, and prototyping.
       </p>
       <p>
-        Do you have an exciting project, work collaboration or idea you want to chat about?&nbsp;
-        I am currently
+        If you have an intriguing project, potential work collaboration, or an innovative idea you&apos;d like to discuss, I&apos;m currently
         <span className="dot" />
         <strong>open</strong> to new opportunities!
         <br />
-        Drop me an email at <strong>hello@domenicoflauto.com</strong>
+        Feel free to drop me an email at <strong>hello@domenicoflauto.com</strong>
       </p>
       <SocialIcons />
 
