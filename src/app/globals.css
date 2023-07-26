@@ -179,6 +179,7 @@ header.header {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
+  color: var(--text-color-2);
 }
 
 .header nav ul {
@@ -196,18 +197,18 @@ header.header {
 
 footer.footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding-block: 12px;;
-  color: var(--text-color-2);
+  color: var(--text-color-3);
 }
 
 .footer span {
+    display: inline-flex;
     position: relative;
     top: 1.5px;
-    display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -221,5 +222,5 @@ footer.footer {
 }
 
 .footer svg path {
-  fill: var(--grey-400)
+  fill: var(--grey-400);
 }
