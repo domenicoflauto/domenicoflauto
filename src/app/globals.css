@@ -208,7 +208,6 @@ footer.footer {
 .footer span {
     display: inline-flex;
     position: relative;
-    top: 1.5px;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
