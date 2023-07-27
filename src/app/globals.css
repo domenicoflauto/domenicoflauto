@@ -100,6 +100,11 @@ section.container {
   /* background: #040D2510; */
 }
 
+section.container-intro {
+  min-height: 520px;
+  height: 80dvh;
+}
+
 @media screen and (min-width: 1328px) {
   section.container, header.header {
     width: 1200px
@@ -165,7 +170,8 @@ h2.title {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #f1f1f1;
   backdrop-filter: blur(6px);
   display: flex;
   flex-direction: row;

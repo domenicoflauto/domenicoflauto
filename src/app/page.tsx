@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Header />
       <motion.section
-        className='container'
+        className='container container-intro'
         id="about"
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}

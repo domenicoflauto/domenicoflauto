@@ -104,3 +104,10 @@
     right: calc(50% - 15vw);
   }
 }
+
+@media screen and (min-width: 1328px) {
+  .blob {
+    font-size: 265px;
+    right: calc(50% - 15vw);
+  }
+}

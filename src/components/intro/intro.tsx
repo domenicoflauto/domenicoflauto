@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { SocialIcons } from '@/components/socialIcons';
+import { IconArrow } from '../work';
 
 import './intro.css';
 
@@ -22,7 +23,7 @@ export function Intro() {
         I am a product designer made in&nbsp;
         <span className="unbreakable">
           <Image src="/images/flag-it.svg" alt="Flag of Italy" width={18} height={14} />
-          Italy,&emsp;
+          Italy,&ensp;
         </span>
         based&nbsp;in&nbsp;
         <span className="unbreakable">
@@ -37,8 +38,7 @@ export function Intro() {
         If you have an intriguing project, potential work collaboration, or an innovative idea you&apos;d like to discuss, I&apos;m currently
         <span className="dot" />
         <strong>open</strong> to new opportunities!
-        <br />
-        Feel free to drop me an email at <strong>hello@domenicoflauto.com</strong>
+        Feel free to drop me an email at <a className='item-link' href="mailto:hello@domenicoflauto.com?subject=Let's talk about [...]&body=Hey Dom, I was on your personal website and I thought I'd send an email...">hello@domenicoflauto.com<IconArrow /></a>
       </p>
       <SocialIcons />
 

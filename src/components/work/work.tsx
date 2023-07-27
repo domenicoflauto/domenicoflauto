@@ -16,7 +16,7 @@ import './work.css';
 
 
 
-const IconArrow = () => {
+export const IconArrow = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
       <mask id="mask0_443_41748" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
