@@ -101,7 +101,7 @@ section.container {
 }
 
 section.container-intro {
-  min-height: 520px;
+  min-height: calc(520px + 56px + 40px);
   height: 80dvh;
 }
 
