@@ -2,6 +2,9 @@
 
 import { Analytics } from '@vercel/analytics/react';
 import { motion } from 'framer-motion';
+import useKonami from 'use-konami';
+
+import { useState } from 'react';
 
 import { Intro } from '@/components/intro';
 import { Work } from '@/components/work';
@@ -45,10 +48,14 @@ export default function Home() {
 }
 
 function Header() {
+  const [konami, setKonami] = useState("");
+  useKonami({
+    onUnlock: () => setKonami("👾 "),
+  });
   return (
     <div className="header-container">
       <header className="header">
-        <span>Domenico Flauto</span>
+        <span>{konami}Domenico Flauto</span>
         <nav>
           <ul>
             <li>

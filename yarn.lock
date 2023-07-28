@@ -6196,6 +6196,7 @@ __metadata:
     storybook: ^7.1.0
     tailwindcss: 3.3.3
     typescript: 5.1.6
+    use-konami: ^1.0.1
   languageName: unknown
   linkType: soft
 
@@ -12822,6 +12823,15 @@ __metadata:
     punycode: ^1.4.1
     qs: ^6.11.0
   checksum: a7de4b37bbcbe60ef199acda4ce437ef843c0ef3a4b34ec3e3d97e0446a5f50dc7bfeafbe33ad118cf4e5aa04805e1328f0d0126e254f2b77bb8498fa395c596
+  languageName: node
+  linkType: hard
+
+"use-konami@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "use-konami@npm:1.0.1"
+  peerDependencies:
+    react: ">=16.13"
+  checksum: f2984a78abc6217ef9c02024f6b5f2901a188c2bf463a67e7da0b23406a8ff6c782a89eb93a9fe21ce7710ca47d99fd352c3af0c920199e38d76b516fc33f59e
   languageName: node
   linkType: hard
 
