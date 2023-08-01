@@ -36,7 +36,7 @@ export function Intro() {
       </p>
       <p>
         If you have an intriguing project, potential work collaboration, or an innovative idea you&apos;d like to discuss, I&apos;m currently
-        <span className="dot" />
+        <span className="blinking-dot" />
         <strong>open</strong> to new opportunities!
         Feel free to drop me an email at <a className='item-link' href="mailto:hello@domenicoflauto.com?subject=Let's talk about [...]&body=Hey Dom, I was on your personal website and I thought I'd send an email...">hello@domenicoflauto.com<IconArrow /></a>
       </p>

@@ -33,7 +33,7 @@
     width: 100%;
 }
 
-.work-item img {
+.work-item .work-image {
     max-width: 584px;
     min-width: 260px;
 }
@@ -101,7 +101,7 @@ a.item-link:hover svg path {
 
 /* <800px */
 @media screen and (max-width: 800px) {
-    .work-item img {
+    .work-item .work-image {
         max-width: 100%;
     }
     

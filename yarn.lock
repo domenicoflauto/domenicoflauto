@@ -3882,6 +3882,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-image-gallery@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@types/react-image-gallery@npm:1.2.0"
+  dependencies:
+    "@types/react": "*"
+  checksum: 7c2b03cc9ccc0be881b7fdb0781cde9423d84a5b1326122025f37817d8b248623482569072bffff3b68faeb5c18c3be569ff2d81b040cbc0bb39fd5938e84606
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:18.2.15, @types/react@npm:>=16":
   version: 18.2.15
   resolution: "@types/react@npm:18.2.15"
@@ -5374,6 +5383,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.2.5":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
+  languageName: node
+  linkType: hard
+
 "clean-css@npm:^5.2.2":
   version: 5.3.2
   resolution: "clean-css@npm:5.3.2"
@@ -6182,6 +6198,7 @@ __metadata:
     "@types/node": 20.4.2
     "@types/react": 18.2.15
     "@types/react-dom": 18.2.7
+    "@types/react-image-gallery": ^1.2.0
     "@vercel/analytics": ^1.0.1
     autoprefixer: 10.4.14
     chromatic: ^6.20.0
@@ -6190,9 +6207,13 @@ __metadata:
     eslint-plugin-storybook: ^0.6.13
     framer-motion: ^10.13.0
     next: latest
+    photoswipe: ^5.3.8
     postcss: 8.4.27
     react: 18.2.0
     react-dom: latest
+    react-image-gallery: ^1.3.0
+    react-photoswipe-gallery: ^2.2.7
+    react-responsive-carousel: ^3.2.23
     storybook: ^7.1.0
     tailwindcss: 3.3.3
     typescript: 5.1.6
@@ -10346,6 +10367,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"photoswipe@npm:^5.3.8":
+  version: 5.3.8
+  resolution: "photoswipe@npm:5.3.8"
+  checksum: c33fd86e1a7bb4710d2c971c6e0983a4c41f55b61bf62466d3a7fc1ae3acff3431292cf0b668a52e103092e7ea21ac548fdd90cec7286cd148c6640e915e3184
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -10670,7 +10698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.8, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10923,6 +10951,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-easy-swipe@npm:^0.0.21":
+  version: 0.0.21
+  resolution: "react-easy-swipe@npm:0.0.21"
+  dependencies:
+    prop-types: ^15.5.8
+  checksum: 225f12a9dd410db1c790220867ab1eb58e2ef0a2bdae8541330805fc5b9905e242ab307b019f9aaed76473849a753f363baff03fa8a77e7a1860d7b41dc83ec0
+  languageName: node
+  linkType: hard
+
 "react-element-to-jsx-string@npm:^15.0.0":
   version: 15.0.0
   resolution: "react-element-to-jsx-string@npm:15.0.0"
@@ -10934,6 +10971,15 @@ __metadata:
     react: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
     react-dom: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
   checksum: c3907cc4c1d3e9ecc8ca7727058ebcba6ec89848d9e07bfd2c77ee8f28f1ad99bf55e38359dec8a1125de83d41ac09a2874f53c41415edc86ffa9840fa1b7856
+  languageName: node
+  linkType: hard
+
+"react-image-gallery@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "react-image-gallery@npm:1.3.0"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 59043609bbcee62bd7c9c72feb59df63abfc246e227c0fae3032d72544c3916a2ff64eae777c7b3400a04221d9791a13ac4b984bd5c25c7ff11ccc7157d92d44
   languageName: node
   linkType: hard
 
@@ -10967,10 +11013,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-photoswipe-gallery@npm:^2.2.7":
+  version: 2.2.7
+  resolution: "react-photoswipe-gallery@npm:2.2.7"
+  peerDependencies:
+    photoswipe: ">= 5.2.2"
+    prop-types: ">= 15.7.0"
+    react: ">= 16.8.0"
+  checksum: fa14f923f3c663d961c1406918580dbfc968c474fdb6544c10f35b7baa0d7e3c5233001fbf6024519eceae5ff76723b0dc5de9057dba4e2cbf8bd9ebae8f8558
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:^0.11.0":
   version: 0.11.0
   resolution: "react-refresh@npm:0.11.0"
   checksum: 112178a05b1e0ffeaf5d9fb4e56b4410a34a73adeb04dbf13abdc50d9ac9df2ada83e81485156cca0b3fa296aa3612751b3d6cd13be4464642a43679b819cbc7
+  languageName: node
+  linkType: hard
+
+"react-responsive-carousel@npm:^3.2.23":
+  version: 3.2.23
+  resolution: "react-responsive-carousel@npm:3.2.23"
+  dependencies:
+    classnames: ^2.2.5
+    prop-types: ^15.5.8
+    react-easy-swipe: ^0.0.21
+  checksum: 8a5b915f140a05425554a0c108c60a0b103dae49808486d39147df09c832ad712c7d7f4a66f0d0c39529ca095b4a327f0cc440d91b5f7a39ab13076931f74bd0
   languageName: node
   linkType: hard
 

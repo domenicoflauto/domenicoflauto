@@ -4,7 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
-import { DuffelLogo, EigenLogo } from '.';
+import { DuffelLogo, EigenLogo, MyGallery } from '.';
 import staysPreview from "public/images/work/stays-1.png"
 import mssPreview from "public/images/work/multi-step-search-1.png"
 import modelEvalPreview from "public/images/work/model-evaluation-1.png"
@@ -13,8 +13,6 @@ import blogPostPreview from "public/images/articles/modern-flight-booking.png"
 import patentPreview from "public/images/patents/training.png"
 
 import './work.css';
-
-
 
 export const IconArrow = () => {
   return (
@@ -114,6 +112,17 @@ const WORK = [
     `,
     callToAction: <ItemLink teaser={1} />,
     image: staysPreview,
+    images: [
+      {
+        original: '/images/work/stays-1.png',
+        thumbnail: 'images/work/stays-1.png',
+        static: staysPreview
+      },
+      {
+        original: '/images/work/stays-2.png',
+        thumbnail: 'images/work/stays-2.png',
+        static: mssPreview
+      }],
     logo: "duffel",
     id: "stays",
   },
@@ -127,6 +136,28 @@ const WORK = [
       `,
     callToAction: <ItemLink teaser={2} />,
     image: mssPreview,
+    images: [
+      {
+        original: '/images/work/multi-step-search-1.png',
+        thumbnail: 'images/work/multi-step-search-1.png',
+        static: staysPreview
+      },
+      {
+        original: '/images/work/multi-step-search-2.png',
+        thumbnail: 'images/work/multi-step-search-2.png',
+        static: mssPreview
+      },
+      {
+        original: '/images/work/multi-step-search-3.png',
+        thumbnail: 'images/work/multi-step-search-3.png',
+        static: mssPreview
+      },
+      {
+        original: '/images/work/multi-step-search-4.png',
+        thumbnail: 'images/work/multi-step-search-4.png',
+        static: mssPreview
+      },
+    ],
     logo: "duffel",
     id: "mss",
   },
@@ -215,6 +246,7 @@ export function Work() {
                   title={work.title}
                   description={work.description}
                   image={work.image}
+                  images={work?.images}
                   logo={work.logo}
                   callToAction={work.callToAction}
                 />
@@ -222,6 +254,28 @@ export function Work() {
             }
             )
           }
+          {/* <div
+            className="work-item"
+          >
+            <MyGallery images={WORK[0].images} />
+
+            <div className='work-description'>
+              <h2 className='title' dangerouslySetInnerHTML={{ __html: <h1>Test</h1> }} />
+              <p dangerouslySetInnerHTML={{ __html: <p>description</p> }} />
+
+            </div>
+          </div>
+          <div
+            className="work-item"
+          >
+            <MyGallery images={WORK[1].images} />
+
+            <div className='work-description'>
+              <h2 className='title' dangerouslySetInnerHTML={{ __html: <h1>Test</h1> }} />
+              <p dangerouslySetInnerHTML={{ __html: <p>description</p> }} />
+
+            </div>
+          </div> */}
         </div>
       </section>
       <section>
@@ -271,12 +325,13 @@ export function Work() {
 }
 
 
-function WorkItem({ title, description, image, logo, callToAction, id }:
+function WorkItem({ title, description, image, images, logo, callToAction, id }:
   {
     id?: string,
     title: string,
     description: string,
     image: StaticImport,
+    images?: Images[],
     logo: string,
     callToAction?: string | JSX.Element
   }) {
@@ -308,13 +363,17 @@ function WorkItem({ title, description, image, logo, callToAction, id }:
       viewport={{ once: true, amount: 0.3 }}
       variants={workItemVariant}
     >
-      <Image
-        className='work-image'
-        src={image}
-        alt=""
+      {
+        images
+          ? <MyGallery images={images} />
+          : <Image
+            className='work-image'
+            src={image}
+            alt=""
+            style={{ width: '100%', height: 'auto' }}
+          />
+      }
 
-        style={{ width: '100%', height: 'auto' }}
-      />
       <div className='work-description'>
         {renderLogo()}
         <h2 className='title' dangerouslySetInnerHTML={{ __html: title }} />
@@ -324,4 +383,9 @@ function WorkItem({ title, description, image, logo, callToAction, id }:
       </div>
     </motion.div>
   )
+}
+
+interface Images {
+  original: string,
+  thumbnail: string,
 }
