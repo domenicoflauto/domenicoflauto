@@ -17,7 +17,9 @@
     width: 100%;
 }
 
-.projects, .articles, .patents {
+.projects,
+.articles,
+.patents {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -38,7 +40,8 @@
     min-width: 260px;
 }
 
-.work p, h2 {
+.work p,
+h2 {
     margin: 0;
 }
 
@@ -68,7 +71,7 @@
 }
 
 span.item-link {
-    color: var(--text-color-2);   
+    color: var(--text-color-2);
 }
 
 .item-link svg path {
@@ -84,9 +87,12 @@ a.item-link:hover svg path {
     .work-item h2 {
         font-size: 2.5vw
     }
-    .work-item p, .work-item span {
+
+    .work-item p,
+    .work-item span {
         font-size: 14px;
     }
+
     .item-link svg {
         height: 14px;
     }
@@ -94,7 +100,10 @@ a.item-link:hover svg path {
 
 /* <1327px */
 @media screen and (max-width: 1327px) {
-    .projects, .articles, .patents {
+
+    .projects,
+    .articles,
+    .patents {
         gap: 80px;
     }
 }
@@ -104,7 +113,7 @@ a.item-link:hover svg path {
     .work-item .work-image {
         max-width: 100%;
     }
-    
+
     .work-item {
         flex-direction: column;
         justify-content: flex-start;
@@ -121,4 +130,13 @@ a.item-link:hover svg path {
         align-items: flex-start;
         gap: 16px;
     }
+}
+
+.slider-wrapper {
+    border-radius: 24px;
+    background: url('/images/gradient-1.png');
+}
+
+.slider-wrapper:hover {
+    background: url('/images/gradient-1.png');
 }

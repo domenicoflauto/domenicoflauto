@@ -114,13 +114,13 @@ const WORK = [
     image: staysPreview,
     images: [
       {
-        original: '/images/work/stays-1.png',
-        thumbnail: 'images/work/stays-1.png',
+        original: '/images/work/stays-1-transparent.png',
+        thumbnail: 'images/work/stays-1-transparent.png',
         static: staysPreview
       },
       {
-        original: '/images/work/stays-2.png',
-        thumbnail: 'images/work/stays-2.png',
+        original: '/images/work/stays-1-transparent.png',
+        thumbnail: 'images/work/stays-1-transparent.png',
         static: mssPreview
       }],
     logo: "duffel",
