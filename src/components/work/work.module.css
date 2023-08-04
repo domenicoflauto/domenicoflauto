@@ -1,0 +1,32 @@
+.workWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 120px;
+  width: 100%;
+  padding-bottom: 240px;
+}
+
+.workSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* <1327px */
+@media screen and (max-width: 1327px) {
+  .workList {
+      gap: 80px;
+  }
+}

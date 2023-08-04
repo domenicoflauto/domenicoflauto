@@ -1,0 +1,38 @@
+.container {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1328px) {
+  /* container won't be wider than 1200px */
+  .container {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1327px) {
+  /* container will be 100% of the screen minus 128px */
+  .container {
+    width: calc(100% - calc(var(--space-md) * 2));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* container will be 800px minus 128px */
+  .container {
+    width: calc(800px - calc(var(--space-md) * 2));
+  }
+}
+
+@media screen and (max-width: 738px) {
+  /* container will be 100% of the screen minus 64px */
+  .container {
+    width: calc(100% - calc(var(--space-sm) * 2));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* container will be 100% of the screen minus 32px */
+  .container {
+    width: calc(100% - calc(var(--space-xs) * 2));
+  }
+}

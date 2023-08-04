@@ -1,0 +1,74 @@
+.headerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #f1f1f1;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  color: var(--text-color-2);
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1328px) {
+  /* header won't be wider than 1200px on big screens */
+  .header {
+    width: 1200px
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1327px) {
+    /* on screen between 801px and 1327px, it will be 128px smaller than
+    the width of the container */
+  .header {
+    width: calc(100% - calc(var(--space-md) * 2));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* on screen smaller than 800px, it will have a fixed width of 672px */
+  .header {
+    width: calc(800px - calc(var(--space-md) * 2));
+  }
+}
+
+@media screen and (max-width: 738px) {
+  /* on screen smaller than 738px, it will be 64px smaller than
+    the width of the container */
+  .header {
+    width: calc(100% - calc(var(--space-sm) * 2));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* on screen smaller than 480px, it will be 32px smaller than
+    the width of the container */
+  .header {
+    width: calc(100% - calc(var(--space-xs) * 2));
+  }
+}

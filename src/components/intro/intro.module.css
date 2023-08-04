@@ -1,0 +1,121 @@
+.intro {
+    width: 100%;
+    max-width: 496px;
+    position: relative;
+  }
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profilePicture {
+  pointer-events: none;
+  border-radius: 8px;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+}
+
+.intro p {
+  margin-block: 24px;
+}
+
+.unbreakable {
+  position: relative;
+  top: 1.5px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 150%;
+}
+
+.unbreakable img {
+  margin-inline-end: 4px;
+}
+
+.dot {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: #16D66E;
+  border-radius: 50%;
+  position: relative;
+  margin-inline: 4px;
+}
+
+.dot:before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border: 5px solid #16D66E;
+  border-radius: inherit;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+  animation: 2s expand cubic-bezier(0.29, 0, 0, 1) infinite;
+  animation-delay: 1s;
+}
+
+.containerIntro {
+  min-height: calc(520px + 56px + 40px);
+  height: 80dvh;
+}
+
+/* this is a repetition from src/components/work/workItem.module.css - fix */
+
+.itemLink {
+  width: 100%;
+  font-size: 16px;
+  line-height: 150%;
+  position: relative;
+  color: var(--color-text-2);
+}
+
+.itemLink svg {
+  height: 20px;
+  position: relative;
+  top: 4px;
+  margin-inline-end: 4px;
+}
+
+.itemLink {
+  color: var(--text-color-2);   
+}
+
+.itemLink svg path {
+  fill: var(--text-color-4);
+}
+
+.itemLink:hover svg path {
+  fill: var(--text-color-1);
+}
+
+
+
+@keyframes expand {
+  1% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  66% {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+    border-color: #16D66E;
+    background-color: none;
+    border-width: 2px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: none;
+    border-color: transparent;
+  }
+}

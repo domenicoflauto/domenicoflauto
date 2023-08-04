@@ -1,0 +1,27 @@
+.blob {
+  position: absolute;
+  top: calc(50% - 10vw);
+  right: calc(33% - 10vw);
+  pointer-events: none;
+  z-index: -5;
+  background: conic-gradient(from 180deg at 50% 50%, #CCEFE9 0deg, #89CFC2 120.07deg, #89CFC2 179.52deg, #FFDE9E 241.65deg, #FFDE9E 299.6deg, #FFDE9E 360deg);
+  border-radius: 50%;
+  font-size: 20vw;
+  height: 1em;
+  width: 1em;
+  filter: blur(48px);
+}
+
+@media screen and (max-width: 738px) {
+  .blob {
+    font-size: 30vw;
+    right: calc(50% - 15vw);
+  }
+}
+
+@media screen and (min-width: 1328px) {
+  .blob {
+    font-size: 265px;
+    right: calc(50% - 15vw);
+  }
+}
