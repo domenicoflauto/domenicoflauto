@@ -41,6 +41,7 @@
     "@storybook/nextjs": "^7.1.0",
     "@storybook/react": "^7.1.0",
     "@storybook/testing-library": "^0.2.0",
+    "@svgr/webpack": "^8.0.1",
     "@types/react-image-gallery": "^1.2.0",
     "chromatic": "^6.20.0",
     "eslint-plugin-storybook": "^0.6.13",

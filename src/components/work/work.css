@@ -132,11 +132,54 @@ a.item-link:hover svg path {
     }
 }
 
-.slider-wrapper {
-    border-radius: 24px;
-    background: url('/images/gradient-1.png');
+.gallery-wrapper {
+    position: relative;
+    cursor: pointer;
 }
 
-.slider-wrapper:hover {
-    background: url('/images/gradient-1.png');
+.gallery-wrapper .carousel-root {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-wrapper:hover .carousel-root {
+    transform: scale(1);
+}
+
+.gallery-wrapper>svg {
+    position: absolute;
+    border-radius: 24px;
+}
+
+.gallery-wrapper #Yellow {
+    fill: #CCCCD4;
+    filter: blur(320px);
+    -webkit-filter: blur(320px);
+    transition: fill 0.3s ease-in-out;
+}
+
+.gallery-wrapper #Pink {
+    fill: #71717A;
+    filter: blur(320px);
+    -webkit-filter: blur(320px);
+    transition: fill 0.5s ease-in-out;
+}
+
+.gallery-wrapper #Purple {
+    fill: #E2E2E8;
+    filter: blur(320px);
+    -webkit-filter: blur(320px);
+    transition: fill 0.15s ease-in-out;
+}
+
+.gallery-wrapper:hover #Yellow {
+    fill: #FFD27C;
+}
+
+.gallery-wrapper:hover #Pink {
+    fill: #F6515B;
+}
+
+.gallery-wrapper:hover #Purple {
+    fill: #E8DCFF;
 }

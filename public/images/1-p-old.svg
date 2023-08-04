@@ -1,0 +1,42 @@
+<svg width="584" height="416" viewBox="0 0 584 416" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <g clip-path="url(#clip0_632_3515)">
+    <rect width="584" height="415.289" fill="#F9F8FC"/>
+    <g opacity="0.4" filter="url(#filter0_f_632_3515)">
+      <path
+        d="M328.636 339.226C443.911 352.986 523.807 231.654 617.372 309.111C636.506 324.952 646.671 335.436 660.465 356.042C740.841 476.116 546.219 557.021 414.104 580.348C344.731 592.597 303.54 587.492 231.635 573.944C167.057 561.777 121.744 558.588 62.8109 525.306C14.6625 498.115 -18.8725 474.993 -42.737 425.182C-64.3627 380.044 -72.3225 341.423 -49.268 301.879C-24.8116 259.929 4.26615 243.841 53.4883 236.295C154.771 220.769 223.947 326.729 328.636 339.226Z" fill="#FFD27C"/>
+      <ellipse
+        cx="94.4063"
+        cy="94.43"
+        rx="94.4063"
+        ry="94.43"
+        transform="matrix(0.409667 0.912235 0.912235 -0.409667 -144.783 -83.9453)"
+        fill="#F6515B"
+      />
+      <ellipse
+        cx="219.436"
+        cy="219.128"
+        rx="219.436"
+        ry="219.128"
+        transform="matrix(-0.17201 0.985095 0.999545 0.0301445 454.465 -69.6992)"
+        fill="#E8DCFF"
+      />
+      <g style="mix-blend-mode:hue" opacity="0.6">
+        <path
+          d="M512.633 83.1837C512.633 83.1837 308.88 0.361197 247.209 69.4532C170.291 155.629 393.121 320.311 393.121 320.311C393.121 320.311 830.733 588.603 916.698 605.082C1053.02 631.215 1165.64 604.944 1170.66 491.679C1174.73 399.721 512.633 83.1837 512.633 83.1837Z" fill="#E8DCFF"/>
+      </g>
+    </g>
+  </g>
+
+  <defs>
+    <filter id="filter0_f_632_3515" x="-434.415" y="-450.943" width="1925.09" height="1385.32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="160" result="effect1_foregroundBlur_632_3515"/>
+    </filter>
+    <clipPath id="clip0_632_3515">
+      <rect width="584" height="415.289" fill="white"/>
+    </clipPath>
+  </defs>
+
+</svg>
