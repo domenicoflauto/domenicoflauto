@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "torn",
+				"type": "Text"
+			},
+			"intro": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse dolor aute anim aliqua consequat aute consectetur ex non aute id ex in Lorem. Eiusmod sunt consequat duis fugiat aliquip."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

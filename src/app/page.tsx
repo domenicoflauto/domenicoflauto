@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { Analytics } from '@vercel/analytics/react';
 
@@ -8,12 +8,22 @@ import { Work } from '@/components/work';
 import { Footer } from '@/components/footer';
 import { Container } from '@/components/container';
 
-export default function Home() {
+import { SliceZone } from "@prismicio/react";
+
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+
+export default async function Home() {
+
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+
   return (
     <>
       <Container>
         <Header />
         <Intro />
+        <SliceZone slices={page.data.slices} components={components} />
         <Work />
         <Footer />
         <Analytics />

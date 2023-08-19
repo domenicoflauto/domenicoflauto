@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import { createClient } from '@/prismicio'
+
 // Font files can be colocated inside of `app`
 const ibmplexsans = localFont({
   src: [
@@ -25,9 +27,14 @@ const ibmplexsans = localFont({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: 'Domenico Flauto - Product Designer',
-  description: 'Hey, I am Dom, a Product Designer based in London.',
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient()
+  const page = await client.getSingle('homepage');
+  return {
+    title: page.data.meta_title || 'Domenico Flauto - Product Designer',
+    description: page.data.meta_description
+      || 'Hey, I am Dom, a Product Designer based in London.',
+  }
 }
 
 export default function RootLayout({

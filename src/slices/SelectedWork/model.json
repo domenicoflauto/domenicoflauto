@@ -1,0 +1,32 @@
+{
+  "id": "selected_work",
+  "type": "SharedSlice",
+  "name": "SelectedWork",
+  "description": "SelectedWork",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "project": {
+          "type": "Link",
+          "config": {
+            "label": "Project",
+            "select": "document",
+            "customtypes": ["case_study"]
+          }
+        }
+      }
+    }
+  ]
+}
