@@ -31,7 +31,10 @@ export function Intro() {
             />
             &nbsp;<i>Dom</i></h1>
           <p>
-            I am a product designer made in&nbsp;
+            Senior product designer @ <a className={styles.itemLink} href="https://www.humaans.io">Humaans <IconArrow /></a>
+          </p>
+          <p>
+            Made in&nbsp;
             <span className={styles.unbreakable}>
               <Image
                 src="/images/flag-it.svg"
@@ -56,10 +59,7 @@ export function Intro() {
             Over the past 8+ years, I have supercharged the growth of various start-ups by fostering a more user-centered approach, focusing my expertise on UX/UI, design systems, user research, and prototyping.
           </p>
           <p>
-            If you have an intriguing project, potential work collaboration, or an innovative idea you&apos;d like to discuss, I&apos;m currently
-            <span className={styles.dot} />
-            <strong>open</strong> to new opportunities!
-            Feel free to drop me an email at <a className={styles.itemLink} href="mailto:hello@domenicoflauto.com?subject=Let's talk about [...]&body=Hey Dom, I was on your personal website and I thought I'd send an email...">hello@domenicoflauto.com<IconArrow /></a>
+            Do you want to discuss a project or just say hi? Feel free to drop me an email at <a className={styles.itemLink} href="mailto:mailto:hello@domenicoflauto.com?subject=Let's talk about [...]&body=Hey Dom, I was on your personal website and I thought I'd send an email...">hello@domenicoflauto.com<IconArrow /></a>
           </p>
           <SocialIcons />
 
