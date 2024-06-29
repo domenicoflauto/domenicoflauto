@@ -1,5 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import localFont from 'next/font/local'
 
 // Font files can be colocated inside of `app`
@@ -37,7 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ibmplexsans.className}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   )
 }

@@ -1,7 +1,5 @@
 "use client";
 
-import { Analytics } from '@vercel/analytics/react';
-
 import { Header } from '@/components/header';
 import { Intro } from '@/components/intro';
 import { Work } from '@/components/work';
@@ -16,7 +14,6 @@ export default function Home() {
         <Intro />
         <Work />
         <Footer />
-        <Analytics />
       </Container>
     </>
   )

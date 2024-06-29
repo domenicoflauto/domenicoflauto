@@ -31,7 +31,7 @@ export function Intro() {
             />
             &nbsp;<i>Dom</i></h1>
           <p>
-            Senior product designer @ <a className={styles.itemLink} href="https://www.humaans.io">Humaans <IconArrow /></a>
+            Senior product designer @ <a className={styles.itemLink} href="https://www.pledge.io">Pledge <IconArrow /></a>
           </p>
           <p>
             Made in&nbsp;

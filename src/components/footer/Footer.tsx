@@ -5,7 +5,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <hr className={styles.separationLine} />
       <div className={styles.footerContent}>
-        <span>© 2023 Domenico Flauto</span>
+        <span>© 2024 Domenico Flauto</span>
         <span>Designed and built with
           <Hearticon />
           in London

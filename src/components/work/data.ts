@@ -1,9 +1,9 @@
-import staysPreview from "public/images/work/stays-1.png"
-import mssPreview from "public/images/work/multi-step-search-1.png"
-import modelEvalPreview from "public/images/work/model-evaluation-1.png"
-import correlatedAnswerPreview from "public/images/work/correlated-answers-1.png"
-import blogPostPreview from "public/images/articles/modern-flight-booking.png"
-import patentPreview from "public/images/patents/training.png"
+import staysPreview from "../../../public/images/work/stays-1.png"
+import mssPreview from "../../../public/images/work/multi-step-search-1.png"
+import modelEvalPreview from "../../../public/images/work/model-evaluation-1.png"
+import correlatedAnswerPreview from "../../../public/images/work/correlated-answers-1.png"
+import blogPostPreview from "../../../public/images/articles/modern-flight-booking.png"
+import patentPreview from "../../../public/images/patents/training.png"
 
 export const WORK = [
   {
