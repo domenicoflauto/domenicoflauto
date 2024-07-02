@@ -43,5 +43,5 @@
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^8.1.11"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "pnpm@9.4.0"
 }
