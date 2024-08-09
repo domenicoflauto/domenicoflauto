@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Head from 'next/head';
+import Script from 'next/script';
 
 import localFont from 'next/font/local'
 
@@ -42,11 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={ibmplexsans.className}>
       <Head>
-        <script
-          defer
+        <Script
           src="https://cloud.umami.is/script.js"
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}>
-        </script>
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          strategy="afterInteractive"
+        />
       </Head>
       <body>
         {children}
