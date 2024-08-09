@@ -2,8 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Head from 'next/head';
-import Script from 'next/script';
+import UmamiProvider from 'next-umami'
 
 import localFont from 'next/font/local'
 
@@ -42,13 +41,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ibmplexsans.className}>
-      <Head>
-        <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-          strategy="afterInteractive"
-        />
-      </Head>
+      <head>
+        <UmamiProvider websiteId="2b70018c-c9f4-4952-b402-cc14dbdfe681" />
+      </head>
       <body>
         {children}
         <SpeedInsights />
