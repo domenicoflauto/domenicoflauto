@@ -3,30 +3,22 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import UmamiProvider from 'next-umami'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 
-import localFont from 'next/font/local'
+import { Header } from '@/components/header';
 
-// Font files can be colocated inside of `app`
-const ibmplexsans = localFont({
-  src: [
-    {
-      path: 'fonts/IBM_Plex_Sans_Variable/ttf/IBM Plex Sans Var-Roman.ttf',
-      style: 'normal',
-    },
-    {
-      path: 'fonts/IBM_Plex_Sans_Variable/ttf/IBM Plex Sans Var-Italic.ttf',
-      style: 'italic',
-    },
-    {
-      path: 'fonts/IBM_Plex_Sans_Variable/woff/IBM Plex Sans Var-Roman.woff',
-      style: 'normal',
-    },
-    {
-      path: 'fonts/IBM_Plex_Sans_Variable/woff2/IBM Plex Sans Var-Roman.woff2',
-      style: 'normal',
-    },
-  ],
+const inter = Inter({
+  subsets: ['latin'],
   display: 'swap',
+  fallback: ['system-ui', 'arial', 'sans-serif'],
+  variable: '--font-inter',
+})
+
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['monospace'],
+  variable: '--font-jetbrains-mono',
 })
 
 export const metadata: Metadata = {
@@ -40,11 +32,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={ibmplexsans.className}>
+    <html lang="en" className={`${inter.variable} ${jetbrains_mono.variable} antialiased`}>
       <head>
         <UmamiProvider websiteId="2b70018c-c9f4-4952-b402-cc14dbdfe681" />
       </head>
-      <body>
+      <body className='bg-[#090A0B]'>
+        <Header />
         {children}
         <SpeedInsights />
         <Analytics />

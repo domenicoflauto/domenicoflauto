@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --blue-900: #040D25;
   --blue-800: #081A49;
@@ -20,35 +24,7 @@
   --grey-900: #383B42;
 
   --white: #FFFFFF;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Dark mode */ 
-/* :root {
-  --bg-color: var(--blue-900);
-  --text-color-1: var(--grey-100);
-  --text-color-2: var(--grey-300);
-} */
-
-:root {
   --bg-color: var(--white);
   --text-color-1: var(--grey-900);
   --text-color-2: var(--grey-800);
@@ -63,57 +39,5 @@ dd {
 }
 
 html {
-  height: 100%;
-  width: 100%;
-  scroll-behavior: smooth;
-  text-rendering: geometricPrecision;
-  scroll-padding-top: 64px;
-}
-
-body {
-  background-color: var(--bg-color);
-  min-height: 100vmin;
-  font-size: 16px;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-a {
-  color: var(--text-color-2);
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--text-color-1);
-}
-
-strong {
-  font-weight: 500;
-  color: var(--text-color-2)
-}
-
-p {
-    width: 100%;
-    color: var(--text-color-2);
-    font-size: 16px;
-    line-height: 150%;
-    font-style: normal;
-}
-
-h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 32px;
-  font-weight: 400;
-  margin-block: 0;
-  color: var(--text-color-1);
-  line-height: 150%;
-}
-
-h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 24px;
-  font-weight: 400;
-  margin-block: 0;
-  color: var(--text-color-1);
-  line-height: 150%;
+  font-family: var(--font-inter)
 }
