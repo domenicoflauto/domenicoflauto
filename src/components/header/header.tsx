@@ -6,21 +6,60 @@ import useKonami from 'use-konami';
 import styles from './header.module.css';
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const [konami, setKonami] = useState(false);
   useKonami({
     // konami code: ↑ ↑ ↓ ↓ ← → ← → b a
     onUnlock: () => setKonami(!konami),
   });
   return (
-    <div className="px-24">
-      <header className={`py-3 flex flex-row justify-between ${styles["header"]}`}>
-        <div className="flex flex-row gap-2 items-center justify-center">
-          <Logo konami={konami} />
-          <span className='text-[#F6F6F6] text-sm font-medium'>Domenico Flauto</span>
-          <span className='text-[#B6B1B6] text-sm'>Product Designer</span>
+    <div className={`fixed px-4 md:px-24 left-0 right-0 top-0 z-20  ${styles["header"]}`}>
+      <header className={`py-3 flex sm:flex-row flex-col justify-between`}>
+        <div className="flex flex-row gap-2 items-center sm:justify-center justify-between">
+          <div className="flex flex-row gap-2 items-center">
+            <Logo konami={konami} />
+            <span className='text-[#F6F6F6] text-sm font-medium'>Domenico Flauto</span>
+          </div>
+          <span className='text-[#B6B1B6] text-sm hidden md:block'>Product Designer</span>
+          <div className="-mr-2 flex items-center sm:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-gray-100 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              aria-controls="mobile-menu"
+              aria-expanded={isOpen ? 'true' : 'false'}
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+        <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
+          <ul className="px-2 pt-2 pb-3 space-y-1 text-[#F6F6F6] text-sm">
+            <li className=''>
+              <a href="#now">Now</a>
+            </li>
+            <li className=''>
+              <a href="#work">Work</a>
+            </li>
+            <li className=''>
+              <a href="#about">About</a>
+            </li>
+            <li className=''>
+              <a href="#about">Contact</a>
+            </li>
+          </ul>
         </div>
         <nav className={``}>
-          <ul className={`flex flex-row text-[#F6F6F6] text-sm`}>
+          <ul className={`hidden sm:flex flex-row text-[#F6F6F6] text-sm`}>
             <li className='px-3'>
               <a href="#now">Now</a>
             </li>

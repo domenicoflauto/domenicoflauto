@@ -36,7 +36,7 @@ export default function RootLayout({
       <head>
         <UmamiProvider websiteId="2b70018c-c9f4-4952-b402-cc14dbdfe681" />
       </head>
-      <body className='bg-[#090A0B]'>
+      <body style={{ minHeight: "calc(100vh + 40px" }} className='bg-[#090A0B]'>
         <Header />
         {children}
         <SpeedInsights />
