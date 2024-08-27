@@ -1,18 +1,38 @@
 "use client";
 
-import { Moon, LocationPin } from '@/components/Icon';
+import { Sun, Moon, LocationPin } from '@/components/Icon';
 import Image from 'next/image';
 
 import styles from './styles.module.css';
+import { useEffect, useState } from 'react';
+
 
 export default function Home() {
+  const [dateState, setDateState] = useState(new Date());
+
+  const t = new Date();
+  const c = t.getHours() - 12;
+  useEffect(() => {
+    setInterval(() => {
+      setDateState(new Date());
+    }, 1000);
+  }, []);
+
+  const currentHour = dateState.getHours();
+
   return (
     <div className='flex flex-col'>
       <div className="flex flex-row px-4 md:px-24 gap-3 pt-20 sm:pt-12">
         <div className="flex flex-row justify-center items-center gap-1 py-2">
-          <Moon />
+          {currentHour >= 6 && currentHour < 18 ? <Sun /> : <Moon />}
           <span className={`text-[#F6F6F6] text-xs ${styles.time}`}>
-            00:20 AM GMT
+            {dateState.toLocaleString("en-GB", {
+              timeZone: "Europe/London",
+              hour: "numeric",
+              minute: "numeric",
+              hour12: true,
+              timeZoneName: "short"
+            }).toUpperCase()}
           </span>
         </div>
         <div className="flex flex-row justify-center items-center gap-1 py-2">

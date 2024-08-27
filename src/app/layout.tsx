@@ -24,6 +24,17 @@ const jetbrains_mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Domenico Flauto - Product Designer',
   description: 'Hey, I am Dom, a Product Designer based in London.',
+  metadataBase: new URL('http://localhost:3000'),
+  openGraph: {
+    title: 'Domenico Flauto - Product Designer',
+    description: 'Hey, I am Dom, a Product Designer based in London.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@DomenicoFlauto',
+    title: 'Domenico Flauto - Product Designer',
+    description: 'Hey, I am Dom, a Product Designer based in London.',
+  }
 }
 
 export default function RootLayout({
