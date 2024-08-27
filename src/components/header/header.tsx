@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useKonami from 'use-konami';
 
 import styles from './header.module.css';
@@ -8,9 +8,27 @@ import styles from './header.module.css';
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [konami, setKonami] = useState(false);
+
+  const [audio, setAudio] = useState<{ up: HTMLAudioElement | null, down: HTMLAudioElement | null }>({
+    up: null,
+    down: null
+  });
+
+  useEffect(() => {
+    setAudio({
+      up: new Audio('/sounds/sfx-up.mp3'),
+      down: new Audio('/sounds/sfx-down.mp3')
+    })
+  }, [])
+
+  // let sfxUp = new Audio('/sounds/sfx-up.mp3');
+  // let sfxDown = new Audio('/sounds/sfx-down.mp3');
   useKonami({
     // konami code: ↑ ↑ ↓ ↓ ← → ← → b a
-    onUnlock: () => setKonami(!konami),
+    onUnlock: () => {
+      setKonami(!konami);
+      !konami ? audio?.up?.play() : audio?.down?.play();
+    }
   });
   return (
     <div className={`fixed px-4 md:px-24 left-0 right-0 top-0 z-20  ${styles["header"]}`}>
