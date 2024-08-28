@@ -84,16 +84,16 @@ export function Nav() {
     <nav className={``}>
       <ul className={`hidden sm:flex flex-row text-[#F6F6F6] text-sm`}>
         <li className='px-3'>
-          <a href="#now">Now</a>
+          <a href="/now">Now</a>
         </li>
         <li className='px-3'>
-          <a href="#work">Work</a>
+          <a href="/work">Work</a>
         </li>
         <li className='px-3'>
-          <a href="#about">About</a>
+          <a href="/about">About</a>
         </li>
         <li className='px-3'>
-          <a href="#about">Contact</a>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
     </nav>
