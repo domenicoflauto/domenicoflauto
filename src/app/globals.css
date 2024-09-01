@@ -36,8 +36,32 @@
   --space-md: 64px;
   --space-sm: 32px;
   --space-xs: 16px;
+
+  --color-base-1: #EAE7D6;
+  --color-base-2: #E2E0D0;
+  --color-sharp: #090A0B;
+  --color-soft: #3A3E42;
+  --color-border-1: #DDD;
+  --color-border-2: #CCC;
+  --color-logo: #090A0B;
+}
+
+[data-theme='dark'] {
+  --color-logo: #EAE7D6;
+  --color-base-1: #090A0B;
+  --color-base-2: #121314;
+  --color-sharp: #F6F6F6;
+  --color-soft: #B6B1B6;
+  --color-border-1: #222;
+  --color-border-2: #333;
 }
 
 html {
   font-family: var(--font-inter)
+}
+
+body {
+  transition-property: background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 }

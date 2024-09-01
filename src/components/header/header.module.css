@@ -1,11 +1,23 @@
 
-
 .header {
-  background: linear-gradient(90deg, rgba(9, 10, 11, 0.80) 0%, rgba(17, 18, 19, 0.80) 15%, rgba(17, 18, 19, 0.80) 85%, rgba(9, 10, 11, 0.00) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-base-1) 0%,
+    var(--color-base-2) 15%,
+    var(--color-base-2) 85%,
+    var(--color-base-1) 100%
+    );
+    opacity: 0.8;
   backdrop-filter: blur(2px);
 }
 
 .borderGradient {
   height: 1px;
-  background: linear-gradient(90deg, #090A0B 0%, #222 15%, #222 85%, #090A0B 100%);
+  background: linear-gradient(
+    90deg, 
+    var(--color-base-1) 0%,
+    var(--color-border-1) 15%,
+    var(--color-border-1) 85%,
+    var(--color-base-1) 100%
+    );
 }

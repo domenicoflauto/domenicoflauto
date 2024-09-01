@@ -6,6 +6,7 @@ import UmamiProvider from 'next-umami'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 
 import { Header } from '@/components/header';
+import { Providers } from './providers';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,13 +44,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains_mono.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jetbrains_mono.variable} antialiased`}>
       <head>
         <UmamiProvider websiteId="2b70018c-c9f4-4952-b402-cc14dbdfe681" />
       </head>
-      <body style={{ minHeight: "calc(100vh + 40px" }} className='bg-[#090A0B]'>
-        <Header />
-        {children}
+      <body style={{ minHeight: "calc(100vh + 40px" }} className='bg-base-1'>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
         <SpeedInsights />
         <Analytics />
       </body>

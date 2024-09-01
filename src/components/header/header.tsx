@@ -30,14 +30,14 @@ export function Header() {
   });
 
   return (
-    <div className={`fixed px-4 md:px-24 left-0 right-0 top-0 z-20  ${styles["header"]}`}>
+    <div className={`fixed px-4 md:px-24 left-0 right-0 top-0 z-20  ${styles["header"]} dark:${styles["header-dark"]}`}>
       <header className={`py-3 flex sm:flex-row flex-col justify-between`}>
         <div className="flex flex-row gap-2 items-center sm:justify-center justify-between">
           <div className="flex flex-row gap-2 items-center">
             <Logo konami={konami} />
-            <span className='text-[#F6F6F6] text-sm font-medium'>Domenico Flauto</span>
+            <span className='text-sharp text-sm font-medium'>Domenico Flauto</span>
           </div>
-          <span className='text-[#B6B1B6] text-sm hidden md:block'>Product Designer</span>
+          <span className='text-soft text-sm hidden md:block'>Product Designer</span>
           <div className="-mr-2 flex items-center sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -72,9 +72,8 @@ function Logo({ konami }: { konami: boolean }) {
     <svg
       width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        className={`${konami ? 'fill-purple-200' : ''}`}
-        d="M7.91101 13.5339L12.9069 10.9776C13.5775 10.6345 13.9984 9.94374 13.9959 9.19048L13.9813 4.80838C13.9788 4.06184 13.5607 3.37883 12.897 3.03701L7.91422 0.470836C7.34044 0.175332 6.65932 0.17488 6.08515 0.469623L1.08664 3.03553C0.419503 3.37799 0 4.06488 0 4.81479V9.19507C0 9.94592 0.420557 10.6335 1.08899 10.9755L6.08899 13.5339C6.66106 13.8266 7.33894 13.8266 7.91101 13.5339Z" fill="#EAE7D6" />
-      <path d="M5.56137 5.56137L3 7L5.56137 8.43863L7 11L8.43863 8.43863L11 7L8.43863 5.56137L7 3L5.56137 5.56137Z" fill="#090A0B" />
+        className={`${konami ? 'fill-purple-200' : 'fill-logo'}`}
+        fillRule="evenodd" clipRule="evenodd" d="M12.9069 10.9778L7.91101 13.534C7.33894 13.8267 6.66106 13.8267 6.08899 13.534L1.08899 10.9757C0.420557 10.6337 0 9.94606 0 9.1952V4.81493C0 4.06502 0.419503 3.37813 1.08664 3.03566L6.08515 0.469759C6.65932 0.175017 7.34044 0.175469 7.91422 0.470973L12.897 3.03715C13.5607 3.37896 13.9788 4.06197 13.9813 4.80852L13.9959 9.19062C13.9984 9.94387 13.5775 10.6347 12.9069 10.9778ZM3 7.00014L5.56137 5.5615L7 3.00014L8.43863 5.5615L11 7.00014L8.43863 8.43877L7 11.0001L5.56137 8.43877L3 7.00014Z" />
     </svg>
   )
 }
@@ -82,7 +81,7 @@ function Logo({ konami }: { konami: boolean }) {
 export function Nav() {
   return (
     <nav className={``}>
-      <ul className={`hidden sm:flex flex-row text-[#F6F6F6] text-sm`}>
+      <ul className={`hidden sm:flex flex-row text-sharp text-sm`}>
         <li className='px-3'>
           <a href="/now">Now</a>
         </li>
@@ -103,26 +102,26 @@ export function Nav() {
 export function MobileMenu({ isOpen }: { isOpen: boolean }) {
   return (
     <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden h-screen`} id="mobile-menu">
-      <ul className="px-2 pt-2 pb-3 space-y-1 text-[#F6F6F6] text-sm">
-        <li className='text-xl pl-3 border-b border-[#222222]'>
+      <ul className="px-2 pt-2 pb-3 space-y-1 text-sharp text-sm">
+        <li className='text-xl pl-3 border-b border-border-1'>
           <a className='flex flex-row justify-between py-3' href="/now">
             Now
             <span>→</span>
           </a>
         </li>
-        <li className='text-xl pl-3 border-b border-[#222222]'>
+        <li className='text-xl pl-3 border-b border-border-1'>
           <a className='flex flex-row justify-between py-3' href="/work">
             Work
             <span>→</span>
           </a>
         </li>
-        <li className='text-xl pl-3 border-b border-[#222222]'>
+        <li className='text-xl pl-3 border-b border-border-1'>
           <a className='flex flex-row justify-between py-3' href="/about">
             About
             <span>→</span>
           </a>
         </li>
-        <li className='text-xl pl-3 border-b border-[#222222]'>
+        <li className='text-xl pl-3 border-b border-border-1'>
           <a className='flex flex-row justify-between py-3' href="/contact">
             Contact
             <span>→</span>
