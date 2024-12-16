@@ -13,6 +13,8 @@ import {
 
 import styles from './workItem.module.css';
 
+import type { JSX } from "react";
+
 export const ItemLink = ({ url, teaser }:
   { url?: string, teaser?: number }) => {
   const Teasers = [

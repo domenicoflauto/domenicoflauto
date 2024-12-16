@@ -25,7 +25,13 @@ export function Header() {
     // konami code: ↑ ↑ ↓ ↓ ← → ← → b a
     onUnlock: () => {
       setKonami(!konami);
-      !konami ? audio?.up?.play() : audio?.down?.play();
+      if (audio.up && audio.down) {
+        if (!konami) {
+          audio.up?.play();
+        } else {
+          audio.down?.play();
+        }
+      }
     }
   });
 
