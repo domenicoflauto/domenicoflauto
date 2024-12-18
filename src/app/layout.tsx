@@ -2,9 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import UmamiProvider from 'next-umami'
 
 import localFont from 'next/font/local'
+import Script from 'next/script';
 
 // Font files can be colocated inside of `app`
 const ibmplexsans = localFont({
@@ -40,15 +40,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={ibmplexsans.className}>
-      <head>
-        <UmamiProvider websiteId="2b70018c-c9f4-4952-b402-cc14dbdfe681" />
-      </head>
-      <body>
-        {children}
-        <SpeedInsights />
-        <Analytics />
-      </body>
-    </html>
+    <>
+      <Script
+        defer
+        src="https://umami.domenicoflauto.com/script.js"
+        data-website-id="b9bfdb26-fe49-4ef5-8f7f-8543b5ed2887"
+      />
+      <html lang="en" className={ibmplexsans.className}>
+        <body>
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </body>
+      </html>
+    </>
   )
 }
