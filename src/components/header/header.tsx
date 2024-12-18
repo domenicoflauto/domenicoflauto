@@ -15,10 +15,10 @@ export function Header() {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" id="nav-about" data-umami-event="nav about">About</a>
             </li>
             <li>
-              <a href="#work">Work</a>
+              <a href="#work" id="nav-work" data-umami-event="nav work">Work</a>
             </li>
           </ul>
         </nav>
