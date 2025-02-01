@@ -1,3 +1,4 @@
+import humaansPreview from "../../../public/images/work/humaans.png"
 import staysPreview from "../../../public/images/work/stays-1.png"
 import mssPreview from "../../../public/images/work/multi-step-search-1.png"
 import modelEvalPreview from "../../../public/images/work/model-evaluation-1.png"
@@ -6,6 +7,19 @@ import blogPostPreview from "../../../public/images/articles/modern-flight-booki
 import patentPreview from "../../../public/images/patents/training.png"
 
 export const WORK = [
+  {
+    title: "Empowering high performing teams' with a delightful admin and employee <i>experience</i>.",
+    description: `
+      Humaans is a HRIS providing a delightful user experience to People Ops, 
+      Finance and IT teams and all employees.
+      In 2024 I contributed to key capabilities of the product from core areas, 
+      such as absence tracking and leave management, to enterprise features, 
+      like Audit log and Custom Permissions.
+    `,
+    image: humaansPreview,
+    logo: "humaans",
+    id: "humaans",
+  },
   {
     title: "Stays: Exploring Uncharted Territory in the <i>Accommodation</i> Industry.",
     description: `

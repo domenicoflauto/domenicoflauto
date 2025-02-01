@@ -1,6 +1,7 @@
+import { JSX } from 'react';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { motion, Variants } from 'framer-motion';
-import { DuffelLogo, EigenLogo } from '.';
+import { DuffelLogo, EigenLogo, HumaansLogo } from '.';
 import Image from 'next/image';
 
 import {
@@ -77,6 +78,7 @@ export function WorkItem(
   const renderLogo = () => {
     if (logo == "duffel") return <DuffelLogo />
     else if (logo === "eigen") return <EigenLogo />
+    else if (logo === "humaans") return <HumaansLogo />
     else return null;
   }
 
