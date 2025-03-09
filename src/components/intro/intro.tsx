@@ -31,7 +31,7 @@ export function Intro() {
             />
             &nbsp;<i>Dom</i></h1>
           <p>
-            Senior product designer @ <a className={styles.itemLink} href="https://www.pledge.io">Pledge <IconArrow /></a>
+            Senior product designer, working on something new ✨
           </p>
           <p>
             Made in&nbsp;
@@ -56,7 +56,7 @@ export function Intro() {
             </span>
           </p>
           <p>
-            Over the past 8+ years, I have supercharged the growth of various start-ups by fostering a more user-centered approach, focusing my expertise on UX/UI, design systems, user research, and prototyping.
+            Over the past 10+ years, I have supercharged the growth of various start-ups by fostering a more user-centered approach, focusing my expertise on UX/UI, design systems, user research, and prototyping.
           </p>
           <p>
             Do you want to discuss a project or just say hi? Feel free to drop me an email at <a className={styles.itemLink} href="mailto:mailto:hello@domenicoflauto.com?subject=Let's talk about [...]&body=Hey Dom, I was on your personal website and I thought I'd send an email...">hello@domenicoflauto.com<IconArrow /></a>
